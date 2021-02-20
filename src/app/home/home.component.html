@@ -1,0 +1,539 @@
+<!-- TITLE -->
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 title">
+                <h1>{{ 'HOME.HEADER' | translate }}</h1>
+                <p>{{ 'HOME.HEADER_TITLE' | translate }}</p>
+                <div>
+                    <button mat-flat-button class="main-button"
+                        [routerLink]="['/auth']">{{ 'HOME.HEADER_REGISTER' | translate }}</button>
+                    <button mat-flat-button class="main-button " routerLink="docs">Documentation</button>
+                    <a href="mailto:nurzhan.mukhamedkali@gmail.com" mat-stroked-button
+                        color="primary">{{ 'HOME.HEADER_CONTACTUS' | translate }}</a>
+                </div>
+
+                <div class="devices">
+                    <span>{{ 'HOME.HEADER_AVAILABLE' | translate }}:</span>
+                    <a href="#"><img src="/assets/images/devices (1).png"></a>
+                    <a href="#"><img src="/assets/images/devices (3).png"></a>
+                    <a href="#"><img src="/assets/images/devices (2).png"></a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="/assets/images/face2.gif">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottomborder"></div>
+
+<!-- ABOUT -->
+<div class="container about">
+    <div class="row">
+        <div class="col-md-4">
+            <mat-card class="example-card">
+                <mat-card-content>
+                    <h2>{{ 'HOME.ABOUT_1_H2' | translate }}</h2>
+                    <p [innerHTML]="'HOME.ABOUT_1_P' | translate"></p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-md-4">
+            <mat-card class="example-card">
+                <mat-card-content>
+                    <h2>{{ 'HOME.ABOUT_2_H2' | translate }}</h2>
+                    <p>{{ 'HOME.ABOUT_2_P' | translate }}</p>
+                    <ul>
+                        <li>{{ 'HOME.ABOUT_2_LI1' | translate }}</li>
+                        <li>{{ 'HOME.ABOUT_2_LI2' | translate }}</li>
+                        <li>{{ 'HOME.ABOUT_2_LI3' | translate }}</li>
+                        <li>{{ 'HOME.ABOUT_2_LI4' | translate }}</li>
+                        <li>{{ 'HOME.ABOUT_2_LI5' | translate }}</li>
+                        <li>{{ 'HOME.ABOUT_2_LI6' | translate }}</li>
+                    </ul>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-md-4">
+            <mat-card class="example-card">
+                <mat-card-content>
+                    <h2>{{ 'HOME.ABOUT_3_H2' | translate }}</h2>
+                    <p [innerHTML]="'HOME.ABOUT_3_P' | translate"></p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>
+
+<!-- FACE -->
+<div class="facerec">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h1 [innerHTML]="'HOME.FACEREC_1' | translate"></h1>
+                <p>{{'HOME.FACEREC_2' | translate}}</p>
+                <!-- Modal window -->
+                <button mat-flat-button class="main-button" (click)="openModal()">
+                    {{'HOME.FACEREC_3' | translate}}
+                </button>
+            </div>
+            <div class="col-md-5">
+                <div class="pulse pulse1"></div>
+                <div class="pulse pulse2"></div>
+                <div class="pulse pulse3"></div>
+                <div class="pulse pulse4"></div>
+                <div class="pulse pulse5"></div>
+                <div class="pulse pulse6"></div>
+                <div class="pulse pulse7"></div>
+                <div class="pulse pulse8"></div>
+                <img src="assets/images/face.png">
+            </div>
+            <div class="col-md-4">
+                <mat-list>
+                    <mat-list-item>
+                        <h4 mat-line class="info1">{{'HOME.FACEREC_4' | translate}}</h4>
+                        <p mat-line style="color: #0288d1;" class="info11">{{'HOME.FACEREC_5' | translate}}</p>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <h4 mat-line class="info3">{{'HOME.FACEREC_6' | translate}}</h4>
+                        <p mat-line style="color: #0288d1;" class="info33">{{'HOME.FACEREC_7' | translate}}</p>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <h4 mat-line class="info3">{{'HOME.FACEREC_8' | translate}}</h4>
+                        <p mat-line style="color: #0288d1;" class="info33">{{'HOME.FACEREC_9' | translate}}</p>
+                    </mat-list-item>
+                </mat-list>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- WORK SAFETY -->
+<div class="workrec">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h1>{{'HOME.workrec_1' | translate}}</h1>
+                <p>{{'HOME.workrec_2' | translate}}</p>
+                <button mat-flat-button class="main-button"
+                    (click)="openModal()">{{'HOME.workrec_3' | translate}}</button>
+            </div>
+            <div class="col-md-4 offset-md-1">
+                <mat-list>
+                    <mat-list-item>
+                        <div>
+                            <img src="assets/images/worksafe (4).png">
+                        </div>
+                        <h4 mat-line>{{'HOME.workrec_6' | translate}}</h4>
+                        <p mat-line style="color: #0288d1;">{{'HOME.workrec_4' | translate}}</p>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <div>
+                            <div class="pulse pulse1"></div>
+                            <div class="pulse pulse2"></div>
+                            <div class="pulse pulse3"></div>
+                            <img src="assets/images/worksafe (1).png">
+                        </div>
+                        <h4 mat-line>{{'HOME.workrec_7' | translate}}</h4>
+                        <p mat-line style="color: red;">{{'HOME.workrec_5' | translate}}</p>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <div>
+                            <img src="assets/images/worksafe (2).png">
+                        </div>
+                        <h4 mat-line>{{'HOME.workrec_8' | translate}}</h4>
+                        <p mat-line style="color: #0288d1;">{{'HOME.workrec_4' | translate}}</p>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <div>
+                            <img src="assets/images/worksafe (3).png">
+                        </div>
+                        <h4 mat-line>{{'HOME.workrec_9' | translate}}</h4>
+                        <p mat-line style="color: #0288d1;">{{'HOME.workrec_4' | translate}}</p>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <div>
+                            <div class="pulse pulse1"></div>
+                            <div class="pulse pulse2"></div>
+                            <div class="pulse pulse3"></div>
+                            <img src="assets/images/worksafe (5).png">
+                        </div>
+                        <h4 mat-line>{{'HOME.workrec_10' | translate}}</h4>
+                        <p mat-line style="color: red;">{{'HOME.workrec_5' | translate}}</p>
+                    </mat-list-item>
+                </mat-list>
+            </div>
+            <div class="col-md-3 offset-md-1">
+                <img src="assets/images/workman.png">
+                <div class="preloader-scan">
+                    <div class="diode">
+                        <div class="laser"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- TRANSPORT -->
+<div class="transport">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h1 [innerHTML]="'HOME.transport_1' | translate"></h1>
+                <p>{{'HOME.transport_2' | translate}}</p>
+                <button mat-flat-button class="main-button"
+                    (click)="openModal()">{{'HOME.transport_3' | translate}}</button>
+            </div>
+            <div class="col-md-3 offset-md-1">
+                <mat-list>
+                    <mat-list-item>
+                        <h4 mat-line class="info1">{{'HOME.transport_4' | translate}}</h4>
+                        <p mat-line style="color: #0288d1;" class="info11">{{'HOME.transport_5' | translate}}</p>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <h4 mat-line class="info2">{{'HOME.transport_6' | translate}}</h4>
+                        <p mat-line style="color: #0288d1;" class="info22">{{'HOME.transport_7' | translate}}</p>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <h4 mat-line class="info3">{{'HOME.transport_8' | translate}}</h4>
+                        <p mat-line style="color: #0288d1;" class="info33">{{'HOME.transport_9' | translate}}</p>
+                    </mat-list-item>
+                </mat-list>
+            </div>
+            <div class="col-md-5">
+                <img src="assets/images/car.gif">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- WAREHOUSE -->
+<div class="warehouse">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h1>{{'HOME.warehouse_1' | translate}}</h1>
+                <p>{{'HOME.warehouse_2' | translate}}</p>
+                <button mat-flat-button class="main-button"
+                    (click)="openModal()">{{'HOME.warehouse_3' | translate}}</button>
+            </div>
+            <div class="col-md-3 offset-md-1">
+                <mat-list>
+                    <mat-list-item>
+                        <h4 mat-line class="info1"><b>{{'HOME.warehouse_4' | translate}}</b></h4>
+                        <p mat-line style="color: #0288d1;" class="info22">{{'HOME.warehouse_5' | translate}}</p>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <h4 mat-line class="info3">{{'HOME.warehouse_6' | translate}}</h4>
+                        <p mat-line class="info33">
+                            <span>{{'HOME.warehouse_7' | translate}}</span>
+                            &nbsp;
+                            <span style="color: #0288d1">{{'HOME.warehouse_8' | translate}}</span>
+                        </p>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <h4 mat-line class="info3">{{'HOME.warehouse_9' | translate}}</h4>
+                        <p mat-line class="info33">
+                            <span style="color: red">{{'HOME.warehouse_10' | translate}}</span>
+                            &nbsp;
+                            <span style="color: #0288d1">{{'HOME.warehouse_11' | translate}}</span>
+                        </p>
+                    </mat-list-item>
+                </mat-list>
+            </div>
+            <div class="col-md-5">
+                <div class="pulse pulse1"></div>
+                <div class="pulse pulse2"></div>
+                <div class="pulse pulse3"></div>
+                <img src="assets/images/warehouse.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ANALYTICS -->
+<div class="analytics">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h1 [innerHTML]="'HOME.analytics_1' | translate"></h1>
+            </div>
+            <div class="col-md-3">
+                <br>
+                <h3>{{'HOME.analytics_2' | translate}}</h3>
+                <p>{{'HOME.analytics_3' | translate}}</p>
+                <img src="assets/images/analytics (3).gif">
+            </div>
+            <div class="col-md-3">
+                <br>
+                <h3>{{'HOME.analytics_4' | translate}}</h3>
+                <p>{{'HOME.analytics_5' | translate}}</p>
+                <img src="assets/images/analytics (2).gif">
+            </div>
+            <div class="col-md-3">
+                <br>
+                <h3>{{'HOME.analytics_6' | translate}}</h3>
+                <p>{{'HOME.analytics_7' | translate}}</p>
+                <img src="assets/images/analytics (1).gif">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- USE -->
+<div class="use">
+    <div class="container">
+        <mat-card>
+            <mat-card-content>
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <h1 [innerHTML]="'HOME.use_1' | translate"></h1>
+                    </div>
+                </div>
+
+                <div class="row betterway">
+                    <div class="col-md-4">
+                        <p [innerHTML]="'HOME.use_2' | translate"></p>
+                        <br>
+                        <div class="part">
+                            <img src="/assets/images/use (2).png">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <p [innerHTML]="'HOME.use_3' | translate"></p>
+                        <br>
+                        <div class="part">
+                            <img src="/assets/images/use (3).png">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <p [innerHTML]="'HOME.use_4' | translate"></p>
+                        <br>
+                        <div class="part">
+                            <img src="/assets/images/use (1).png">
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>{{'HOME.use_5' | translate}}</h2>
+                        <p>{{'HOME.use_6' | translate}}</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>{{'HOME.use_7' | translate}}</h2>
+                        <p [innerHTML]="'HOME.use_8' | translate"></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>{{'HOME.use_9' | translate}}</h2>
+                        <p>{{'HOME.use_10' | translate}}</p>
+                    </div>
+                </div>
+
+                <div class="try">
+                    <button mat-flat-button class="main-button"
+                        [routerLink]="['/auth']">{{'HOME.use_11' | translate}}</button>
+                    <div class="devices">
+                        <span>{{'HOME.use_12' | translate}}</span>
+                        <a href="#"><img src="/assets/images/devices (1).png"></a>
+                        <a href="#"><img src="/assets/images/devices (3).png"></a>
+                        <a href="#"><img src="/assets/images/devices (2).png"></a>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+
+<!-- ROADMAP -->
+<div class="roadmap">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>{{ 'HOME.roadmap_1' | translate }}</h1>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="col-md-4">
+                <div class="map">
+                    <div class="item">
+                        <div class="dot"></div>
+                        <p>{{ 'HOME.roadmap_1_1' | translate }}</p>
+                        <p>{{ 'HOME.roadmap_1_2' | translate }}</p>
+                    </div>
+                    <div class="item">
+                        <div class="dot"></div>
+                        <p>{{ 'HOME.roadmap_2_1' | translate }}</p>
+                        <p>{{ 'HOME.roadmap_2_2' | translate }}</p>
+                    </div>
+                    <div class="item">
+                        <div class="dot"></div>
+                        <p>{{ 'HOME.roadmap_3_1' | translate }}</p>
+                        <p>{{ 'HOME.roadmap_3_2' | translate }}</p>
+                    </div>
+                    <div class="item">
+                        <div class="dot"></div>
+                        <p>{{ 'HOME.roadmap_4_1' | translate }}</p>
+                        <p>{{ 'HOME.roadmap_4_2' | translate }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="map">
+                    <div class="item">
+                        <div class="dot"></div>
+                        <p>{{ 'HOME.roadmap_5_1' | translate }}</p>
+                        <p>{{ 'HOME.roadmap_5_2' | translate }}</p>
+                    </div>
+                    <div class="item">
+                        <div class="dot"></div>
+                        <p>{{ 'HOME.roadmap_6_1' | translate }}</p>
+                        <p>{{ 'HOME.roadmap_6_2' | translate }}</p>
+                    </div>
+                    <div class="item">
+                        <div class="dot"></div>
+                        <p>{{ 'HOME.roadmap_7_1' | translate }}</p>
+                        <p>{{ 'HOME.roadmap_7_2' | translate }}</p>
+                    </div>
+                    <div class="item">
+                        <div class="dot"></div>
+                        <p>{{ 'HOME.roadmap_8_1' | translate }}</p>
+                        <p>{{ 'HOME.roadmap_8_2' | translate }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="map">
+                    <div class="item">
+                        <div class="dot"></div>
+                        <p>{{ 'HOME.roadmap_9_1' | translate }}</p>
+                        <p>{{ 'HOME.roadmap_9_2' | translate }}</p>
+                    </div>
+                    <div class="item">
+                        <div class="dot"></div>
+                        <p>{{ 'HOME.roadmap_10_1' | translate }}</p>
+                        <p>{{ 'HOME.roadmap_10_2' | translate }}</p>
+                    </div>
+                    <div class="item">
+                        <div class="dot"></div>
+                        <p>{{ 'HOME.roadmap_11_1' | translate }}</p>
+                        <p>{{ 'HOME.roadmap_11_2' | translate }}</p>
+                    </div>
+                    <div class="item">
+                        <div class="dot"></div>
+                        <p>{{ 'HOME.roadmap_12_1' | translate }}</p>
+                        <p>{{ 'HOME.roadmap_12_2' | translate }}</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+<!-- TEAM -->
+<div class="container team">
+    <h1>{{ 'HOME.team_1' | translate }}</h1>
+
+    <mat-card>
+        <img mat-card-image src="assets/images/temp-user/team (3).jpg">
+        <mat-card-content>
+            <p>{{ 'HOME.team_2' | translate }}</p>
+            <p class="position">{{ 'HOME.team_3' | translate }}</p>
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <img mat-card-image src="assets/images/temp-user/team (4).jpg">
+        <mat-card-content>
+            <p>{{ 'HOME.team_4' | translate }}</p>
+            <p class="position">{{ 'HOME.team_5' | translate }}</p>
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <img mat-card-image src="assets/images/temp-user/team (1).jpg">
+        <mat-card-content>
+            <p>{{ 'HOME.team_6' | translate }}</p>
+            <p class="position">{{ 'HOME.team_7' | translate }}</p>
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <img mat-card-image src="assets/images/temp-user/team (2).jpg">
+        <mat-card-content>
+            <p>{{ 'HOME.team_8' | translate }}</p>
+            <p class="position">{{ 'HOME.team_9' | translate }}</p>
+        </mat-card-content>
+    </mat-card>
+
+    <br><br>
+    <a href="mailto:nurzhan.mukhamedkali@gmail.com" mat-flat-button
+        class="main-button">{{ 'HOME.team_10' | translate }}</a>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <div class="container ">
+        <div class="logo">
+            <img src="assets/images/logo/logo-anim.gif" alt="logo">
+            <span>EINIX</span>
+            <span>VISION</span>
+        </div>
+
+        <h2>{{ 'HOME.footer_1' | translate }}</h2>
+        <p>© 2019 Einix Vision</p>
+    </div>
+</div>

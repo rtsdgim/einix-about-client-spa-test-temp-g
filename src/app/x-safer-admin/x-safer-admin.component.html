@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>SAFE-R Administration</h2>
+            <p>
+                To avoid and prevent the risks of industrial incidents, associated with hazardous facilities and unsafe
+                situations, the system has the ability to send reports with photos to the security department for
+                further action.
+            </p>
+            <mat-divider></mat-divider>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <br>
+            <h3>All requests</h3>
+
+            <mat-list>
+                <mat-list-item *ngFor="let item of requests; let i = index">
+                    <img mat-list-icon src="{{item.requesterPhoto}}" alt="">
+                    <h4 mat-line>{{item.requester}}</h4>
+                    <h4 mat-line>{{item.location}}</h4>
+                    <p>{{item.requesteDate | date}}</p>
+                    <button mat-icon-button (click)="showRequestDetails(i)">
+                        <mat-icon>info</mat-icon>
+                    </button>
+                </mat-list-item>
+            </mat-list>
+        </div>
+        <div class="col-md-7 offset-md-1" *ngIf="currentSelectedRequest !== null">
+            <br>
+            <h3>Request details</h3>
+            <div class="row">
+                <div class="col-md-5">
+                    <img style="width: 100%;" src="{{currentSelectedRequest.photo}}" alt="">
+                </div>
+                <div class="col-md-7">
+
+                    <b>Requester:</b>
+                    <div>{{currentSelectedRequest.requester}}</div>
+                    <div>{{currentSelectedRequest.requesteDate}}</div>
+
+                    <br>
+                    <b>Location</b>
+                    <div>{{currentSelectedRequest.location}}</div>
+
+                    <br>
+                    <b>Description</b>
+                    <div>{{currentSelectedRequest.description}}</div>
+                    <br>
+                    <b>Status</b>
+                    <div *ngIf="currentSelectedRequest.isClosed">Closed</div>
+                    <div *ngIf="!currentSelectedRequest.isClosed">Pending</div>
+
+                    <br>
+                    <button mat-flat-button>Get report</button>
+                    &nbsp;
+                    <button mat-flat-button>Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

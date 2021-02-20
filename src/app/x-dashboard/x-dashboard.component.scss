@@ -1,0 +1,24 @@
+.buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  button {
+    margin-right: 7px;
+    margin-bottom: 7px;
+    height: 104px;
+    width: 104px;
+
+    span {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      display: block;
+      word-wrap: break-word;
+      line-height: 16px;
+      white-space: normal;
+    }
+  }
+}

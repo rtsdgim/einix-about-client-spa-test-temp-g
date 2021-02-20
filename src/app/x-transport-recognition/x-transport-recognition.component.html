@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Transport recognition</h2>
+            <p>
+                Identifying transport full model, recognize number in base and check speed limit.
+            </p>
+            <mat-divider></mat-divider>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <br>
+
+        <div class="col-md-4">
+            <mat-list>
+                <mat-list-item>
+                    <h4 mat-line>Demo 1</h4>
+                    <h4 mat-line>Transport recognition</h4>
+                    <button mat-icon-button (click)="playVideo(1)">
+                        <mat-icon>play_arrow</mat-icon>
+                    </button>
+                </mat-list-item>
+                <mat-list-item>
+                    <h4 mat-line>Demo 2</h4>
+                    <h4 mat-line>Transport counting</h4>
+                    <button mat-icon-button (click)="playVideo(2)">
+                        <mat-icon>play_arrow</mat-icon>
+                    </button>
+                </mat-list-item>
+                <mat-list-item>
+                    <h4 mat-line>Demo 3</h4>
+                    <h4 mat-line>Transport type recognition</h4>
+                    <button mat-icon-button (click)="playVideo(3)">
+                        <mat-icon>play_arrow</mat-icon>
+                    </button>
+                </mat-list-item>
+                <mat-list-item>
+                    <h4 mat-line>Demo 4</h4>
+                    <h4 mat-line>Transport speed limit recognition</h4>
+                    <h6>IN_PROGRESS</h6>
+                </mat-list-item>
+                <mat-list-item>
+                    <h4 mat-line>Demo 5</h4>
+                    <h4 mat-line>Line tracking near traffic light</h4>
+                    <h6>IN_PROGRESS</h6>
+                </mat-list-item>
+                <mat-list-item>
+                    <h4 mat-line>Demo 6</h4>
+                    <h4 mat-line>Indicating of using cell phone</h4>
+                    <h4 mat-line>Indicative of cell </h4>
+                    <h6>IN_PROGRESS</h6>
+                </mat-list-item>
+            </mat-list>
+        </div>
+        <div class="col-md-7 offset-md-1">
+            <video controls style="width: 80%;" #videoPlayer>
+                <source src="{{videoSource}}" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div>

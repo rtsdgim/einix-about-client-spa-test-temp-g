@@ -1,0 +1,46 @@
+@import "src/styles/variables.scss";
+
+:host {
+  @include app-display-flex($flex-direction: column);
+  overflow: hidden;
+}
+
+.mat-nav-list {
+  .mat-list-item {
+    height: 40px;
+
+    .mat-icon {
+      @include app-display-flex($align-items: center);
+      font-size: 20px;
+      margin: 0 14px 0 9px;
+    }
+
+    span {
+      @include app-text-overflow($text-overflow: ellipsis);
+      font-size: 14px;
+    }
+  }
+
+  .mat-subheader {
+    @include app-text-overflow($text-overflow: ellipsis);
+    display: block;
+    margin: -5px 0px -5px 9px;
+  }
+
+  .mat-divider {
+    margin: 10px 0;
+  }
+}
+
+.footer {
+  padding: 25px;
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.disabled {
+  cursor: not-allowed !important;
+  opacity: 0.36;
+}

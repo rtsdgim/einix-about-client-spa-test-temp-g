@@ -1,0 +1,82 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>SAFE-R</h2>
+            <p>
+                To avoid and prevent the risks of industrial incidents, associated with hazardous facilities and unsafe
+                situations, the system has the ability to send reports with photos to the security department for
+                further action.
+            </p>
+            <mat-divider></mat-divider>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <p><b>Unsafe situation photo:</b></p>
+            <div *ngIf="photo !== null">
+                <img [src]="photo" width="200" />
+            </div>
+
+            <button mat-stroked-button (click)="openDialog()" color="primary">
+                <span *ngIf="photo !== null">Take a photo again</span>
+                <span *ngIf="photo == null">Take a photo of unsafe situation</span>
+            </button>
+        </div>
+
+        <div class="col-md-6">
+            <br><br>
+
+            <form [formGroup]="requestForm" (ngSubmit)="sendRequest()">
+                <!-- REQUESTER -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Requester</mat-label>
+                    <input matInput formControlName="requester">
+                    <mat-icon matSuffix>person</mat-icon>
+                </mat-form-field>
+                <br>
+
+                <!-- DATE (TODAY) -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Request date</mat-label>
+                    <input matInput formControlName="requesteDate">
+                    <mat-icon matSuffix>today</mat-icon>
+                </mat-form-field>
+
+                <!-- Location -->
+                <br>
+                <mat-form-field appearance="outline">
+                    <mat-label>Location</mat-label>
+                    <mat-select formControlName="location">
+                        <mat-option value="Norsec, 1 floor">Norsec, 1 floor</mat-option>
+                        <mat-option value="Norsec, 2 floor">Norsec, 2 floor</mat-option>
+                        <mat-option value="Norsec, 3 floor">Norsec, 3 floor</mat-option>
+                        <mat-option value="Norsec, Data Center">Norsec, Data Center</mat-option>
+                        <mat-option value="Norsec, Coffee room">Norsec, Coffee room</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <!-- Situation description -->
+                <br>
+                <mat-form-field appearance="outline">
+                    <mat-label>Situation description</mat-label>
+                    <input matInput formControlName="description">
+                </mat-form-field>
+
+                <br>
+                <button mat-flat-button color="primary" type="submit">Send request</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

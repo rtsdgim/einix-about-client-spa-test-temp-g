@@ -1,0 +1,35 @@
+@import "./app-theme.scss";
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+a,
+button {
+  min-width: auto !important;
+}
+
+// active link style
+.router-link-active {
+  font-weight: 500;
+}
+
+// scroll style (webkit only)
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+// use this class when you need auto spacer between two flex elements
+.space-between {
+  flex: 1 1 auto;
+}

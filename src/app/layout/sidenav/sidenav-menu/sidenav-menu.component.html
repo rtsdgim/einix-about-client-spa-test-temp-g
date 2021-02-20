@@ -1,0 +1,67 @@
+<mat-nav-list>
+    <a mat-list-item [routerLink]="['dashboard']" routerLinkActive="router-link-active" (click)="onClick()">
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashboard</span>
+    </a>
+
+    <mat-divider></mat-divider>
+
+    <a mat-list-item [routerLink]="['facerec']" routerLinkActive="router-link-active" (click)="onClick()">
+        <mat-icon>face</mat-icon>
+        <span>Face recognition</span>
+    </a>
+    <a mat-list-item [routerLink]="['safetyrec']" routerLinkActive="router-link-active" (click)="onClick()">
+        <mat-icon>how_to_reg</mat-icon>
+        <span>Workplace Health & Safety</span>
+    </a>
+    <a mat-list-item [routerLink]="['transportrec']" routerLinkActive="router-link-active" (click)="onClick()">
+        <mat-icon>commute</mat-icon>
+        <span>Transport recognition</span>
+    </a>
+    <a mat-list-item class="disabled">
+        <mat-icon>control_camera</mat-icon>
+        <span>Real time analysis</span>
+    </a>
+    <a mat-list-item [routerLink]="['safer']" routerLinkActive="router-link-active" (click)="onClick()">
+        <mat-icon>control_camera</mat-icon>
+        <span>Safe-R</span>
+    </a>
+    <a mat-list-item [routerLink]="['safer-admin']" routerLinkActive="router-link-active" (click)="onClick()">
+        <mat-icon>control_camera</mat-icon>
+        <span>Safe-R Admin Panel</span>
+    </a>
+    <a mat-list-item class="disabled">
+        <mat-icon>control_camera</mat-icon>
+        <span>Monitoring</span>
+    </a>
+
+    <mat-divider></mat-divider>
+
+    <a mat-list-item class="disabled">
+        <mat-icon>pie_chart</mat-icon>
+        <span>Data analytics</span>
+    </a>
+    <a mat-list-item class="disabled">
+        <mat-icon>assessment</mat-icon>
+        <span>Reports</span>
+    </a>
+
+    <mat-divider></mat-divider>
+
+    <a mat-list-item [routerLink]="['settings']" routerLinkActive="router-link-active" (click)="onClick()">
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
+    </a>
+    <a mat-list-item class="disabled">
+        <mat-icon>help</mat-icon>
+        <span>Help</span>
+    </a>
+    <a mat-list-item class="disabled">
+        <mat-icon>feedback</mat-icon>
+        <span>Feedback</span>
+    </a>
+</mat-nav-list>
+
+<div class="footer">
+    <p>2019 EinixVision</p>
+</div>

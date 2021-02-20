@@ -1,0 +1,15 @@
+<mat-sidenav-container>
+
+    <mat-sidenav #sidenav 
+        [opened]="windowService.isLargeScreen ? 'true' : 'false'" 
+        [fixedInViewport]="'false'" 
+        [mode]="windowService.isLargeScreen ? 'side' : 'over'">
+        
+        <app-sidenav-menu></app-sidenav-menu>
+    </mat-sidenav>
+    
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

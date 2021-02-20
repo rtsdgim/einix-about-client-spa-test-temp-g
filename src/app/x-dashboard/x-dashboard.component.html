@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Dashboard</h2>
+            <p><b>Welcome:</b> {{userName}}</p>
+            <mat-divider></mat-divider>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="buttons">
+
+                <button mat-stroked-button color="primary" [routerLink]="['/facerec']">
+                    <mat-icon>face</mat-icon>
+                    <span>Face recognition</span>
+                </button>
+                <button mat-stroked-button color="primary" [routerLink]="['/safetyrec']">
+                    <mat-icon>how_to_reg</mat-icon>
+                    <span>Workplace Health & Safety</span>
+                </button>
+                <button mat-stroked-button color="primary" [routerLink]="['/transportrec']">
+                    <mat-icon>commute</mat-icon>
+                    <span>Transport recognition</span>
+                </button>
+                <button mat-stroked-button color="primary" [routerLink]="['/realtime']" disabled>
+                    <mat-icon>control_camera</mat-icon>
+                    <span>Real time analysis</span>
+                </button>
+
+                <mat-divider></mat-divider>
+
+                <button mat-stroked-button color="primary" [routerLink]="['/analytics']" disabled>
+                    <mat-icon>pie_chart</mat-icon>
+                    <span>Data analytics</span>
+                </button>
+                <button mat-stroked-button color="primary" [routerLink]="['/reports']" disabled>
+                    <mat-icon>assessment</mat-icon>
+                    <span>Reports</span>
+                </button>
+
+                <mat-divider></mat-divider>
+
+                <button mat-stroked-button color="primary" [routerLink]="['/settings']">
+                    <mat-icon>settings</mat-icon>
+                    <span>Settings</span>
+                </button>
+                <button mat-stroked-button color="primary" [routerLink]="['/help']" disabled>
+                    <mat-icon>help</mat-icon>
+                    <span>Help</span>
+                </button>
+                <button mat-stroked-button color="primary" [routerLink]="['/feedback']" disabled>
+                    <mat-icon>feedback</mat-icon>
+                    <span>Feedback</span>
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+@import "src/styles/variables.scss";
+
+:host {
+  @include app-display-flex($flex-direction: column);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  @media only screen and (max-width: 992px) {
+    position: static;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+  }
+}

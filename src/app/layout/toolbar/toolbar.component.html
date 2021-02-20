@@ -1,0 +1,35 @@
+<mat-toolbar>
+    <div class="left-column">
+        <button *ngIf="isLoggedIn()" class="menu-button" mat-icon-button (click)="toggleSidenav()"
+            matTooltip="Toggle left navigation menu">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <a class="logo" [routerLink]="['/']">
+            <img *ngIf="!isLoggedIn()" src="assets/images/logo/logo.png" alt="logo">
+            <span>EINIX</span>
+            <span>VISION</span>
+        </a>
+    </div>
+
+    <div class="middle-column">
+        <div class="space-between"></div>
+
+        <button mat-icon-button matTooltip="{{ 'TOOLBAR.CHANGE_THEME' | translate }}" (click)="toogleTheme()">
+            <mat-icon>brightness_3</mat-icon>
+        </button>
+
+        <!-- LOGIN BUTTON -->
+        <a *ngIf="!isLoggedIn()" mat-stroked-button [routerLink]="['/auth']">
+            {{ 'TOOLBAR.SIGNIN' | translate }}
+        </a>
+        <a *ngIf="isLoggedIn()" mat-stroked-button (click)="logout()">
+            Logout
+        </a>
+
+        <select #langselect (change)="translateService.use(langselect.value)" class="lang">
+            <option *ngFor="let lang of translateService.getLangs()" [value]="lang">
+                {{ lang }}
+            </option>
+        </select>
+    </div>
+</mat-toolbar>

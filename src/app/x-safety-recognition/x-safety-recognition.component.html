@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Workplace Health & Safety</h2>
+            <p>
+                Identifying workplace safety hazards and issues is the first step in protecting employees.
+            </p>
+            <mat-divider></mat-divider>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <br>
+
+        <div class="col-md-4">
+            <mat-list>
+                <mat-list-item>
+                    <h4 mat-line>Demo 1</h4>
+                    <h4 mat-line>Verification of PPE</h4>
+                    <button mat-icon-button (click)="playVideo(1)">
+                        <mat-icon>play_arrow</mat-icon>
+                    </button>
+                </mat-list-item>
+            </mat-list>
+        </div>
+        <div class="col-md-7 offset-md-1">
+            <video controls style="width: 80%;" #videoPlayer>
+                <source src="{{videoSource}}" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div>

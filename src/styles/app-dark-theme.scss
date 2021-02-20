@@ -1,0 +1,60 @@
+@import "~@angular/material/theming";
+
+/*
+    Use this file only for setting global colors !
+    All other global styles u can write in base.scss file.
+*/
+
+@mixin app-dark-theme {
+  .app-dark-theme {
+    // default material theme
+    $app-dark-palette-primary: mat-palette($mat-light-blue, 700);
+    $app-dark-palette-accent: mat-palette($mat-blue-grey);
+    $app-dark-palette-warn: mat-palette($mat-red);
+    $app-dark-theme: mat-dark-theme($app-dark-palette-primary, $app-dark-palette-accent, $app-dark-palette-warn);
+    @include angular-material-theme($app-dark-theme);
+
+    // backgrounds
+    .app-background-default {
+      background: lighten($color: mat-color($mat-grey, 900), $amount: 2);
+    }
+
+    // active link style
+    .router-link-active {
+      color: mat-color($mat-light-blue, 700) !important;
+      background: rgba($color: white, $alpha: 0.04);
+    }
+
+    // scroll style (webkit only)
+    ::-webkit-scrollbar-track {
+      background: darken($color: mat-color($mat-grey, 800), $amount: 4);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: darken($color: mat-color($mat-grey, 700), $amount: 4);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: mat-color($mat-grey, 500);
+    }
+
+    // toolbar background
+    .mat-toolbar {
+      background: mat-color($mat-grey, 900);
+    }
+
+    // sidenav container
+    body {
+      background: mat-color($mat-grey, 900);
+    }
+    .mat-sidenav {
+      background: mat-color($mat-grey, 900);
+    }
+    .mat-sidenav-content {
+      background: mat-color($mat-grey, 900);
+    }
+
+    // card background
+    .mat-card {
+      background: darken(mat-color($mat-grey, 900), $amount: 4);
+    }
+  }
+}

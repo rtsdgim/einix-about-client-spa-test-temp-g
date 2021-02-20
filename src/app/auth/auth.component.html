@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+
+            <br><br>
+            <h2>Login for demo</h2>
+            <p>Type an user name and take a selfie in profile page for see full demo.</p>
+
+            <br><br>
+            <mat-form-field appearance="outline">
+                <mat-label>Name</mat-label>
+                <input matInput type="text" placeholder="Any user name" [formControl]="favoriteColorControl" required
+                    autocomplete="off">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Don't worry, all data will be removed after demo day!</mat-hint>
+            </mat-form-field>
+
+            <br><br><br>
+            <button mat-flat-button color="primary" (click)="login()">Get demo access</button>
+
+            <br><br>
+        </div>
+    </div>
+</div>

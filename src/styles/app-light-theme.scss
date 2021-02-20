@@ -1,0 +1,60 @@
+@import "~@angular/material/theming";
+
+/*
+    Use this file only for setting global colors !
+    All other global styles u can write in base.scss file.
+*/
+
+@mixin app-light-theme {
+  .app-light-theme {
+    // default material theme
+    $app-light-palette-primary: mat-palette($mat-blue, 700);
+    $app-light-palette-accent: mat-palette($mat-green, 900);
+    $app-light-palette-warn: mat-palette($mat-red);
+    $app-light-theme: mat-light-theme($app-light-palette-primary, $app-light-palette-accent, $app-light-palette-warn);
+    @include angular-material-theme($app-light-theme);
+
+    // backgrounds
+    .app-background-default {
+      background: white;
+    }
+
+    // active link style
+    .router-link-active {
+      color: mat-color($mat-blue, 700) !important;
+      background: rgba($color: black, $alpha: 0.04);
+    }
+
+    // scroll style (webkit only)
+    ::-webkit-scrollbar-track {
+      background: mat-color($mat-grey, 900);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: mat-color($mat-grey, 400);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: mat-color($mat-grey, 600);
+    }
+
+    // toolbar background
+    .mat-toolbar {
+      background: white;
+    }
+
+    // sidenav container
+    body {
+      background: white;
+    }
+    .mat-sidenav {
+      background: white;
+    }
+    .mat-sidenav-content {
+      //
+    }
+
+    // card background
+    .mat-card {
+      //
+    }
+  }
+}

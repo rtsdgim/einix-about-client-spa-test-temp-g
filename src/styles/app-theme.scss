@@ -1,0 +1,9 @@
+@import "./app-light-theme.scss";
+@import "./app-dark-theme.scss";
+
+// material
+@include mat-core();
+
+// include light & dark themes
+@include app-light-theme();
+@include app-dark-theme();

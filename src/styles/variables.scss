@@ -1,0 +1,18 @@
+@import "~@angular/material/theming";
+
+// using material colors
+// example: mat-color($mat-grey, 800);
+
+// help mixins
+@mixin app-text-overflow($text-overflow: ellipsis) {
+  overflow: hidden;
+  text-overflow: $text-overflow;
+  white-space: nowrap;
+}
+
+@mixin app-display-flex($flex-direction: row, $justify-content: flex-start, $align-items: stretch) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
